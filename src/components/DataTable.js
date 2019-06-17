@@ -8,19 +8,19 @@ export default props => {
                 <thead>
                 <tr>
                     <th onClick={() => props.onSort('id')}>
-                        ID {props.sortField === 'id' ? <small>{props.sort}</small> : null}
+                        ID {props.sortField === 'id' ? <span className={props.sort + ' sort__mark'}/> : null}
                     </th>
                     <th onClick={() => props.onSort('firstName')}>
-                        First Name {props.sortField === 'firstName' ? <small>{props.sort}</small> : null}
+                        First Name {props.sortField === 'firstName' ? <span className={props.sort + ' sort__mark'}/> : null}
                     </th>
                     <th onClick={() => props.onSort('lastName')}>
-                        Last Name {props.sortField === 'lastName' ? <small>{props.sort}</small> : null}
+                        Last Name {props.sortField === 'lastName' ? <span className={props.sort + ' sort__mark'}/> : null}
                     </th>
                     <th onClick={() => props.onSort('email')}>
-                        Email {props.sortField === 'email' ? <small>{props.sort}</small> : null}
+                        Email {props.sortField === 'email' ? <span className={props.sort + ' sort__mark'}/> : null}
                     </th>
                     <th onClick={() => props.onSort('phone')}>
-                        Phone {props.sortField === 'phone' ? <small>{props.sort}</small> : null}
+                        Phone {props.sortField === 'phone' ? <span className={props.sort + ' sort__mark'}/> : null}
                     </th>
                 </tr>
                 </thead>
@@ -54,5 +54,17 @@ const TableWrapper = styled.div`
         
         &.text-danger {
         cursor: default;
+        
+        
+    }
+    
+    .sort__mark {
+        &.desc:before {
+        content: '\\2B06';
+        }
+        
+        &.asc:before {
+        content: '\\2B07';
+        }
     }
 `;
