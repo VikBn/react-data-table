@@ -15,7 +15,7 @@ export default props => {
                                 <span>Выбран пользователь:</span><b> {lastName}</b>
                                 <div className='mt-2'>
                                     <div>Информафия:</div>
-                                    <textarea cols="30" rows="7" value={description} readOnly/>
+                                    <textarea cols="40" rows="7" value={description} readOnly/>
                                 </div>
                                 <div className='mt-2'>Адрес проживания: {address.streetAddress}</div>
                                 <div className='mt-2'>Город: {address.city}</div>
